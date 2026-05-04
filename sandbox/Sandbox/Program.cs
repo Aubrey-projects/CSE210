@@ -2,6 +2,7 @@ using System;
 
 class Program
 {
+    /*
     // void is the type of data it returns
     static void DisplayGreeting()
         {
@@ -13,6 +14,7 @@ class Program
         double total = n1 + n2 + n3;
         return total;
     }
+    */
 
     static void Main(string[] args)
     {
@@ -52,7 +54,7 @@ class Program
             age2 = int.Parse(Console.ReadLine());
         } while (age2 <= 0 || age2 > 125);
         */
-
+        /*
         for (int i = 0; i <= 32; ++i)
         {
             // int is centered at 0, and can go from 2 billion to -2 billion
@@ -80,5 +82,7 @@ class Program
         DisplayGreeting();
         double total = AddNumbers(10, 20, 1001.234);
         Console.WriteLine(total);
+        */
+
     }
 }
