@@ -15,5 +15,10 @@ class JournalEntry()
         _prompt = _prompts[0];
         Console.WriteLine(_prompt);
         _response = Console.ReadLine();
-    }   
+    }
+
+    public void DisplayJournalEntry()
+    {
+        Console.WriteLine($"{_date}, {_prompt}, {_response}");
+    }
 }

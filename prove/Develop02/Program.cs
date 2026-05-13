@@ -4,7 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        JournalEntry journalEntry = new JournalEntry();
-        journalEntry.CreateJournalEntry();
+        JournalEntry myJournalEntry = new JournalEntry();
+        myJournalEntry.CreateJournalEntry();
+        myJournalEntry.DisplayJournalEntry();
     }
 }
