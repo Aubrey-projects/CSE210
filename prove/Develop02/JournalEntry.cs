@@ -1,0 +1,19 @@
+class JournalEntry()
+{
+    string _date;
+    string _prompt;
+    string _response;
+    string[] _prompts =
+    {
+        "How are you feeling today?",
+        "Who did you talk with today?"
+    };
+
+    public void CreateJournalEntry()
+    {
+        _date = DateTime.Now.ToShortDateString();
+        _prompt = _prompts[0];
+        Console.WriteLine(_prompt);
+        _response = Console.ReadLine();
+    }   
+}
