@@ -1,8 +1,8 @@
-class JournalEntry()
+public class JournalEntry()
 {
-    string _date;
-    string _prompt;
-    string _response;
+    public string _date;
+    public string _prompt;
+    public string _response;
     string[] _prompts =
     {
         "How are you feeling today?",

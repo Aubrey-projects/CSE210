@@ -1,6 +1,6 @@
 using System.Net;
 
-class Menu
+public class Menu
 {
     string _userChoice;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-class Journal
+public class Journal
 {
     List<JournalEntry> _journalEntries = new List<JournalEntry>();
     string _path = @"C:\Users\orang\Desktop\VisualStudioCodeProjects\CSE210\prove\Develop02\";
@@ -38,12 +38,20 @@ class Journal
 
     public void ReadFile()
     {
+        _journalEntries.Clear();
         Console.Write("What is the file name? ");
         _filename = Console.ReadLine();
         string[] lines = System.IO.File.ReadAllLines($"{_path}{_filename}");
         foreach (string line in lines)
         {
-            Console.WriteLine(line);
+            string[] parts = line.Split("#");
+
+            JournalEntry LoadedJournalEntry = new JournalEntry();
+            LoadedJournalEntry._date = parts[0];
+            LoadedJournalEntry._prompt = parts[1];
+            LoadedJournalEntry._response = parts[2];
+            AddJournalEntry(LoadedJournalEntry);
+
         }
     }
 }
