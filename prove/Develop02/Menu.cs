@@ -7,7 +7,6 @@ class Menu
     public void ProcessMenu()
     { // Defining these outside of the loop so they don't get reset
         Journal myJournal = new Journal();
-        JournalEntry myJournalEntry = new JournalEntry();
 
         // Loop until the user choices to quit
         while (_userChoice != "5" && _userChoice != "quit")
@@ -26,6 +25,7 @@ class Menu
             if (_userChoice == "1" || _userChoice == "write")
             {
                 Console.WriteLine("writing entry...");
+                JournalEntry myJournalEntry = new JournalEntry();
                 myJournalEntry.CreateJournalEntry();
                 myJournal.AddJournalEntry(myJournalEntry);
 

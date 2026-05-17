@@ -5,17 +5,20 @@ class JournalEntry()
     string _response;
     string[] _prompts =
     {
-        // Finish this code we need more prompts
         "How are you feeling today?",
-        "Who did you talk with today?"
+        "Who did you talk with today?",
+        "Where did you go today?",
+        "What was the best part of your day?",
+        "What did you do today?",
     };
 
     public void CreateJournalEntry()
     {
         _date = DateTime.Now.ToShortDateString();
 
-        // Finish this code we need a random prompt
-        _prompt = _prompts[0];
+        Random randomGenerator = new Random();
+        int randomIndex = randomGenerator.Next(0, 5);
+        _prompt = _prompts[randomIndex];
         Console.WriteLine(_prompt);
         _response = Console.ReadLine();
     }
