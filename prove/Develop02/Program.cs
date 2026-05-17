@@ -1,21 +1,25 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        JournalEntry myJournalEntry = new JournalEntry();
-        myJournalEntry.CreateJournalEntry();
-        // myJournalEntry.DisplayJournalEntry();
-        // Console.WriteLine(myJournalEntry.CreateFileSystemString());
+        Menu myMenu = new Menu();
+        myMenu.ProcessMenu();
 
-        JournalEntry myJournalEntry2 = new JournalEntry();
-        myJournalEntry2.CreateJournalEntry();
+        // JournalEntry myJournalEntry = new JournalEntry();
+        // myJournalEntry.CreateJournalEntry();
+        // // myJournalEntry.DisplayJournalEntry();
+        // // Console.WriteLine(myJournalEntry.CreateFileSystemString());
 
-        Journal myJournal = new Journal();
-        myJournal.AddJournalEntry(myJournalEntry);
-        myJournal.AddJournalEntry(myJournalEntry2);
+        // JournalEntry myJournalEntry2 = new JournalEntry();
+        // myJournalEntry2.CreateJournalEntry();
 
-        myJournal.DisplayJournal();
+        // Journal myJournal = new Journal();
+        // myJournal.AddJournalEntry(myJournalEntry);
+        // myJournal.AddJournalEntry(myJournalEntry2);
     }
 }
