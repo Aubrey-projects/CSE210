@@ -6,7 +6,8 @@ using System.IO;
 class Journal
 {
     List<JournalEntry> _journalEntries = new List<JournalEntry>();
-    string _filename = @"C:\Users\orang\Desktop\VisualStudioCodeProjects\CSE210\prove\Develop02\Journal.txt";
+    string _path = @"C:\Users\orang\Desktop\VisualStudioCodeProjects\CSE210\prove\Develop02\";
+    string _filename;
 
     public void AddJournalEntry(JournalEntry journalEntry)
     {
@@ -23,7 +24,9 @@ class Journal
 
     public void WriteToFile()
     {
-        using (StreamWriter outputFile = new StreamWriter(_filename))
+        Console.Write("What is the file name? ");
+        _filename = Console.ReadLine();
+        using (StreamWriter outputFile = new StreamWriter($"{_path}{_filename}"))
         {
             foreach (JournalEntry journalEntry in _journalEntries)
             {
@@ -35,7 +38,9 @@ class Journal
 
     public void ReadFile()
     {
-        string[] lines = System.IO.File.ReadAllLines(_filename);
+        Console.Write("What is the file name? ");
+        _filename = Console.ReadLine();
+        string[] lines = System.IO.File.ReadAllLines($"{_path}{_filename}");
         foreach (string line in lines)
         {
             Console.WriteLine(line);
