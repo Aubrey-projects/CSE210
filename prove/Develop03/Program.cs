@@ -6,5 +6,15 @@ class Program
     {
         Word myWord = new Word("Hello");
         Console.WriteLine(myWord.GetWordString());
+
+        myWord.Hide();
+        Console.WriteLine(myWord.GetWordString());
+
+        myWord.DisplayWord();
+        if (myWord.IsHidden())
+        {
+            Console.WriteLine(myWord.GetWordString());
+        }
+
     }
 }
