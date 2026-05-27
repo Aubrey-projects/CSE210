@@ -14,11 +14,12 @@ class Word
         string tempWord = _word;
         if (_hidden)
         {
-            return
-        } else
-        {
-            return
+            foreach(char c in _word)
+            {
+                tempWord 
+            }
         }
+        return _word;
     }
 
     public void Hide()
