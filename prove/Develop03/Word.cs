@@ -11,6 +11,18 @@ class Word
 
     public string GetWordString()
     {
-        return _word;
+        string tempWord = _word;
+        if (_hidden)
+        {
+            return
+        } else
+        {
+            return
+        }
+    }
+
+    public void Hide()
+    {
+        _hidden = true;
     }
 }
