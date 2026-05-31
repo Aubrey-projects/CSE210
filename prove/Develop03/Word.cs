@@ -1,17 +1,16 @@
-// Wrod class will contain the word. If the word is hidden, GetWordString
-// will return _ characters - one for each character in the word
 class Word
 {
+    // variables
     private string _word;
     private bool _hidden;
 
+    // contructor
     public Word (string word)
     {
         _word = word;
         _hidden = false;
     }
 
-    // GetWordString - Return either the word, if not hidden, or the _s
     public string GetWordString()
     {
         string tempWord = "";
@@ -40,6 +39,6 @@ class Word
 
     public void DisplayWord()
     {
-        Console.WriteLine(GetWordString());
+        Console.Write($"{GetWordString()} ");
     }
 }
