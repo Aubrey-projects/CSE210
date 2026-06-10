@@ -6,7 +6,7 @@ class Listing : Activity
     private Random _randomGenerator = new Random();
 
     // Constructor
-    public Listing(string activityType, string activityDesc) : base (activityType, activityDesc)
+    public Listing() : base ("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.")
     {
         
     }

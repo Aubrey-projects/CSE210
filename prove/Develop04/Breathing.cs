@@ -1,13 +1,15 @@
 class Breathing : Activity
 {
     // Constructor
-    public Breathing(string activityType, string activityDesc) : base (activityType, activityDesc)
+    public Breathing() : base ("Breathing Activity", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.")
     {
         
     }
 
-    public void BreathingActivity()
+    public void RunBreathingActivity()
     {
-        
+        StartActivity();
+        RunCountDown("Breath In", 4);
+        RunCountDown("Breath Out", 6);
     }
 }
