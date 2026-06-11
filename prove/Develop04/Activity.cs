@@ -19,14 +19,16 @@ class Activity
     public void StartActivity()
     {
         Console.WriteLine($"Welcome to the {_activityType}.");
+        Console.WriteLine("");
         Console.WriteLine(_activityDesc);
-        Console.Write($"How many seconds for this activity? "); // Change this so it matches
+        Console.WriteLine("");
+        Console.Write("How long, in seconds, would you like for your session? ");
         _sessionDuration = int.Parse(Console.ReadLine());
     }
 
     public void RunCountDown(string message, int duration)
     {
-        Console.Write($"{message}: ");
+        Console.Write($"{message}");
         while(duration >= 0)
         {
             Console.Write($"{duration--,2}");
@@ -36,13 +38,15 @@ class Activity
         Console.WriteLine("");
     }
     
-    public void RunLoadingAnimation()
+    public void RunSpinningAnimation()
     {
         
     }
 
     public void DisplayEndingMessage()
     {
+        Console.WriteLine("Well done!!");
         Console.WriteLine("");
+        Console.WriteLine($"You have completed another {_sessionDuration} seconds of the {_activityType}.");
     }
 }

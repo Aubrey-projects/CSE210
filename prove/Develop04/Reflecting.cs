@@ -35,7 +35,7 @@ class Reflecting : Activity
         return question;
     }
 
-    public void ReflectingActivity()
+    public void RunReflectingActivity()
     {
         
     }

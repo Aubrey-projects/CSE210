@@ -18,7 +18,7 @@ class Listing : Activity
         return prompt;
     }
 
-    public void ListingActivity()
+    public void RunListingActivity()
     {
         
     }

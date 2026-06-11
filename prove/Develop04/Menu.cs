@@ -13,14 +13,17 @@ class Menu
         {
             case 1:
                 Breathing breathingActivity = new Breathing();
+                breathingActivity.RunBreathingActivity();
                 break;
 
             case 2:
                 Reflecting reflectingActivity = new Reflecting();
+                reflectingActivity.RunReflectingActivity();
                 break;
 
             case 3:
                 Listing listingActivity = new Listing();
+                listingActivity.RunListingActivity();
                 break;
 
             case 4:
