@@ -9,7 +9,13 @@ class Breathing : Activity
     public void RunBreathingActivity()
     {
         StartActivity();
-        RunCountDown("Breath in...", 4);
-        RunCountDown("Now breath out...", 6);
+        DateTime endTime = GetEndTime();
+        while (DateTime.Now < endTime)
+        {
+            RunCountDown("Breath in...", 4);
+            RunCountDown("Now breath out...", 6);
+            Console.WriteLine("");
+        }
+        DisplayEndingMessage();
     }
 }

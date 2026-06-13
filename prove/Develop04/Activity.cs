@@ -16,6 +16,13 @@ class Activity
     }
 
     // Methods
+    public DateTime GetEndTime()
+    {
+        DateTime now = DateTime.Now;
+        _endTime = now.AddSeconds(_sessionDuration);
+        return _endTime;
+    }
+
     public void StartActivity()
     {
         Console.WriteLine($"Welcome to the {_activityType}.");
@@ -24,6 +31,10 @@ class Activity
         Console.WriteLine("");
         Console.Write("How long, in seconds, would you like for your session? ");
         _sessionDuration = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine("Get Ready...");
+        RunSpinningAnimation();
+        Console.WriteLine("");
     }
 
     public void RunCountDown(string message, int duration)
@@ -40,13 +51,26 @@ class Activity
     
     public void RunSpinningAnimation()
     {
-        
+        string animationString = "\\|/-";
+        DateTime now = DateTime.Now;
+        DateTime endTime = now.AddSeconds(3);
+        int index = 0;
+        while(DateTime.Now < endTime)
+        {
+            Console.Write(animationString[index++ % animationString.Length]);
+            Thread.Sleep(250);
+            Console.Write("\b");
+        }
+        Console.Write("\b ");
     }
 
     public void DisplayEndingMessage()
     {
+        Console.WriteLine("");
         Console.WriteLine("Well done!!");
+        RunSpinningAnimation();
         Console.WriteLine("");
         Console.WriteLine($"You have completed another {_sessionDuration} seconds of the {_activityType}.");
+        RunSpinningAnimation();
     }
 }

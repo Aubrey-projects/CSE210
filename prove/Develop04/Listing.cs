@@ -11,6 +11,7 @@ class Listing : Activity
         
     }
 
+    // Methods
     public string SelectPrompt()
     {
         int randomIndex = _randomGenerator.Next(0, _listingPrompts.Count);
@@ -20,7 +21,13 @@ class Listing : Activity
 
     public void RunListingActivity()
     {
-        
+        StartActivity();
+        DateTime endTime = GetEndTime();
+        while (DateTime.Now < endTime)
+        {
+            Console.WriteLine(".");
+        }
+        DisplayEndingMessage();
     }
 
     public void AppendUserResponse(string userResponse)

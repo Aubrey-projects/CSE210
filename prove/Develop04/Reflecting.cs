@@ -11,6 +11,7 @@ class Reflecting : Activity
         
     }
 
+    // Methods
     public void AppendPrompt(string prompt)
     {
         _reflectionPrompts.Add(prompt);
@@ -37,6 +38,15 @@ class Reflecting : Activity
 
     public void RunReflectingActivity()
     {
-        
+        StartActivity();
+        Console.WriteLine("Consider the following prompt:");
+        string prompt = "";
+        Console.WriteLine($" --- {prompt} --- ");
+        DateTime endTime = GetEndTime();
+        while (DateTime.Now < endTime)
+        {
+            Console.WriteLine(".");
+        }
+        DisplayEndingMessage();
     }
 }
