@@ -22,11 +22,19 @@ class Listing : Activity
     public void RunListingActivity()
     {
         StartActivity();
+        Console.WriteLine("List as many responses you can to the following prompt:");
+        Console.WriteLine("");
+        string prompt = SelectPrompt();
+        Console.WriteLine($" --- {prompt} --- ");
+        Console.WriteLine("");
+        RunCountDown("You may begin in: ", 5);
         DateTime endTime = GetEndTime();
         while (DateTime.Now < endTime)
         {
-            Console.WriteLine(".");
+            Console.Write(">");
+            AppendUserResponse(Console.ReadLine());
         }
+        Console.WriteLine($"You listed {_userResponses.Count} items!");
         DisplayEndingMessage();
     }
 
@@ -38,10 +46,5 @@ class Listing : Activity
     public void AppendPrompt(string prompt)
     {
         _listingPrompts.Add(prompt);
-    }
-
-    public int CountTotalResponses()
-    {
-        return _userResponses.Count;
     }
 }

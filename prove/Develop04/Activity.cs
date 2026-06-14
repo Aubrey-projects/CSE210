@@ -33,7 +33,7 @@ class Activity
         _sessionDuration = int.Parse(Console.ReadLine());
         Console.Clear();
         Console.WriteLine("Get Ready...");
-        RunSpinningAnimation();
+        RunSpinningAnimation(2);
         Console.WriteLine("");
     }
 
@@ -49,11 +49,11 @@ class Activity
         Console.WriteLine("");
     }
     
-    public void RunSpinningAnimation()
+    public void RunSpinningAnimation(int duration)
     {
         string animationString = "\\|/-";
         DateTime now = DateTime.Now;
-        DateTime endTime = now.AddSeconds(3);
+        DateTime endTime = now.AddSeconds(duration);
         int index = 0;
         while(DateTime.Now < endTime)
         {
@@ -68,9 +68,9 @@ class Activity
     {
         Console.WriteLine("");
         Console.WriteLine("Well done!!");
-        RunSpinningAnimation();
+        RunSpinningAnimation(2);
         Console.WriteLine("");
         Console.WriteLine($"You have completed another {_sessionDuration} seconds of the {_activityType}.");
-        RunSpinningAnimation();
+        RunSpinningAnimation(2);
     }
 }

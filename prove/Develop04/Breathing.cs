@@ -15,6 +15,7 @@ class Breathing : Activity
             RunCountDown("Breath in...", 4);
             RunCountDown("Now breath out...", 6);
             Console.WriteLine("");
+            Thread.Sleep(1000);
         }
         DisplayEndingMessage();
     }

@@ -40,12 +40,21 @@ class Reflecting : Activity
     {
         StartActivity();
         Console.WriteLine("Consider the following prompt:");
-        string prompt = "";
+        Console.WriteLine("");
+        string prompt = SelectPrompt();
         Console.WriteLine($" --- {prompt} --- ");
+        Console.WriteLine("");
+        Console.WriteLine("When you have something in mind, press enter to continue.");
+        Console.ReadLine();
+        Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
+        RunCountDown("You may begin in: ", 5);
+        Console.Clear();
         DateTime endTime = GetEndTime();
         while (DateTime.Now < endTime)
         {
-            Console.WriteLine(".");
+            string question = SelectQuestion();
+            Console.WriteLine($"> {question}");
+            RunSpinningAnimation(5);
         }
         DisplayEndingMessage();
     }
