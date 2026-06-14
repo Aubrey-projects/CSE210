@@ -4,6 +4,9 @@ class Menu
     {
         Console.Clear();
         bool continueProgram = false;
+        int breathingAmount = 0;
+        int reflectingAmount = 0;
+        int listingAmount = 0;
         while (continueProgram == false)
         {
             Console.WriteLine("Menu Options:");
@@ -19,6 +22,7 @@ class Menu
                     Breathing breathingActivity = new Breathing();
                     Console.Clear();
                     breathingActivity.RunBreathingActivity();
+                    breathingAmount++;
                     break;
 
                 case 2:
@@ -38,6 +42,7 @@ class Menu
                     reflectingActivity.AppendQuestion("How can you keep this experience in mind in the future?");
                     Console.Clear();
                     reflectingActivity.RunReflectingActivity();
+                    reflectingAmount++;
                     break;
 
                 case 3:
@@ -49,10 +54,18 @@ class Menu
                     listingActivity.AppendPrompt("Who are some of your personal heroes?");
                     Console.Clear();
                     listingActivity.RunListingActivity();
+                    listingAmount++;
                     break;
 
                 case 4:
                     continueProgram = true;
+                    Console.Clear();
+                    Console.WriteLine("Thank you for particpating!");
+                    Console.WriteLine("");
+                    Console.WriteLine($"You have completed the Breathing Activity {breathingAmount} times.");
+                    Console.WriteLine($"You have completed the Reflecting Activity {reflectingAmount} times.");
+                    Console.WriteLine($"You have completed the Listing Activity {listingAmount} times.");
+                    Thread.Sleep(5000);
                     break;
             }
         }
