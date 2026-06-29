@@ -7,7 +7,7 @@ class Menu
         bool continueLoop = true;
         do
         {
-            Console.WriteLine($"You have # points");
+            Console.WriteLine($"You have {_goalsList.GetTotalGoalPoints()} points");
             Console.WriteLine("");
             Console.WriteLine("Menu Options:");
             Console.WriteLine("\t1. Create New Goal");
@@ -35,7 +35,7 @@ class Menu
                 
             } else if (userChoice == 5)
             {
-                
+                _goalsList.RecordEvent();
             } else if (userChoice == 6)
             {
                 continueLoop = false;

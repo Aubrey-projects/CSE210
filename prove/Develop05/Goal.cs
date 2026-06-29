@@ -27,6 +27,11 @@ class Goal
         _goalPoints = goalPoints;
     }
 
+    public int GetGoalPoints()
+    {
+        return _goalPoints;
+    }
+
     public string GetGoalType()
     {
         return _goalType;
