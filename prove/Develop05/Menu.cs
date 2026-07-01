@@ -66,19 +66,19 @@ class Menu
 
             if (userChoice == 1)
             {
-                Simple simpleGoal = new Simple(goalName, goalDescription, goalPoints);
+                Goal simpleGoal = new Simple(goalName, goalDescription, goalPoints);
                 return simpleGoal;
 
             } else if (userChoice == 2)
             {
-                Eternal eternalGoal = new Eternal(goalName, goalDescription, goalPoints);
+                Goal eternalGoal = new Eternal(goalName, goalDescription, goalPoints);
                 return eternalGoal;
 
             } else if (userChoice == 3)
             {
                 int amountTillBonus = PromptAmountTillBonus();
                 int bonusPoints = PromptBonusPoints();
-                Checklist checklistGoal = new Checklist(goalName, goalDescription, goalPoints, amountTillBonus, bonusPoints);
+                Goal checklistGoal = new Checklist(goalName, goalDescription, goalPoints, amountTillBonus, bonusPoints);
                 return checklistGoal;
             } else
             {
